@@ -1,0 +1,14 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Orders</title>
+</head>
+<body>
+<div th:each="order : ${orders}">
+    <div th:each="ticket : ${order.ticketOrders}">
+        <p th:text="${ticket.movieTitle}"></p>
+        <p th:text="${ticket.numberOfTickets}"></p>
+    </div>
+</div>
+</body>
+</html>
